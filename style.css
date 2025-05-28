@@ -1,53 +1,88 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: hsl(212, 45%, 89%) ;
+    background: #d5e1ef;
     font-family: 'Outfit', sans-serif;
-    font-size: 22;
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Card styles */
+.card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.0477);
+    width: 320px;
+    padding: 16px 16px 40px 16px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-}
- 
-.card {
-    background: hsl(0, 0%, 100%);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 250px;
+    z-index: 1;
 }
 
+/* QR code image */
 .qr-code img {
-    width: 100%;
+    width: 288px;
+    height: 288px;
     border-radius: 10px;
+    display: block;
+    margin-bottom: 24px;
 }
 
+/* Text styles */
 .text {
-    margin-top: 20px;
-}
-
-.text h3{
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #1f314f;
-}
-
-.text p{
-    font-size: 12px;
-    color: #7b879d;
-}
-
-.attribution {
-    font-size: 11px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0;
+    padding: 0 8px;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-    text-decoration: none;
+.text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f314f;
+    margin: 0 0 16px 0;
+    line-height: 1.25;
+    letter-spacing: 0;
+}
+
+.text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #7d889e;
+    margin: 0;
+    line-height: 1.25;
+    letter-spacing: 0;
+}
+
+/* Attribution styles */
+.attribution {
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #7d889e;
+    z-index: 2;
+}
+
+/* Remove decorative background elements for a clean look */
+body::before, body::after {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+    .card {
+        width: 90vw;
+        padding: 8px 4vw 24px 4vw;
+    }
+    .qr-code img {
+        width: 100%;
+        height: auto;
+    }
 }
