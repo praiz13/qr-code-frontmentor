@@ -21,7 +21,7 @@ Made with simple html and CSS.
 Easy to learn with tricky styling
 
 ### Screenshot
-![screenshot of QR code](![screenshot](<Screen Shot 2025-05-28 at 10.16.41.png>)
+![screenshot of QR code]![screenshot](<Screen Shot 2025-05-28 at 10.20.48.png>)
 
 
 ### Links
